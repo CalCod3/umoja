@@ -68,7 +68,8 @@
                 <div class="container-fluid">
                     <!-- Small boxes (Stat box) -->
                     <div class="row">
-                        @foreach ($formated_classes as $class)
+                    @foreach ($formated_classes as $class)
+                            @if ($class['_count'] != 0)
 
                             <div class="col-lg-3 col-6">
                                 <!-- small box -->
@@ -85,6 +86,7 @@
                                             class="fas fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
+                            @endif
 
                         @endforeach
                         {{-- <div class="col-lg-3 col-6">
